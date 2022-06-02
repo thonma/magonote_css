@@ -1,39 +1,26 @@
 const sass = require('sass');
 const fs = require('fs');
 
-// =================================
-// Read style.scss
-// =================================
-let src = fs.readFileSync('./src/style.scss', 'utf-8');
-
-// =================================
-// Some task
-// =================================
-// JSでしかできないことがあればここに書くつもり
+const INPUT_PATH = './src/style.scss';
+const OUTPUT_PATH = './dist/magonote.css';
+const OUTPUT_PATH_MINIFY = './dist/magonote.min.css';
 
 // =================================
 // Compile
 // =================================
-const compiledCss = sass.compileString(src, {
-  style: 'compressed', // minify
-  importers: [{
-    canonicalize(url) {
-      return new URL(`${url}:./src/_${url}.scss`);
-    },
-    load(canonicalUrl) {
-      return {
-        contents: fs.readFileSync(canonicalUrl.pathname, 'utf-8'),
-        syntax: 'scss'
-      };
-    }
-  }]
+const compiledCss = sass.compile(INPUT_PATH, {
+  style: 'expanded',
+});
+const compiledMinCss = sass.compile(INPUT_PATH, {
+  style: 'compressed',
 });
 
 // =================================
 // Output
 // =================================
-const outputFilepath = './dist/magonote.min.css';
-fs.writeFileSync(outputFilepath, compiledCss.css, {
+const outputOptions = {
   encoding: 'utf-8',
-});
-console.log(`Write ${outputFilepath}`);
+};
+const outputCallback = (err) => { err ? console.error(err) : null; };
+fs.writeFile(OUTPUT_PATH, compiledCss.css, outputOptions, outputCallback);
+fs.writeFile(OUTPUT_PATH_MINIFY, compiledMinCss.css, outputOptions, outputCallback);
