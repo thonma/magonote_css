@@ -1,0 +1,40 @@
+@use "variables" as vars;
+
+$i: 2;
+
+@while $i<=32 {
+  .m_#{$i} {
+    margin-top: #{$i}px;
+    margin-right: #{$i}px;
+    margin-bottom: #{$i}px;
+    margin-left: #{$i}px;
+  }
+
+  .mx_#{$i} {
+    margin-left: #{$i}px;
+    margin-right: #{$i}px;
+  }
+
+  .my_#{$i} {
+    margin-top: #{$i}px;
+    margin-bottom: #{$i}px;
+  }
+
+  .mt_#{$i} {
+    margin-top: #{$i}px;
+  }
+
+  .mr_#{$i} {
+    margin-right: #{$i}px;
+  }
+
+  .mb_#{$i} {
+    margin-bottom: #{$i}px;
+  }
+
+  .ml_#{$i} {
+    margin-left: #{$i}px;
+  }
+
+  $i: $i + 2;
+}

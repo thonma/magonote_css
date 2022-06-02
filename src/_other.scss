@@ -1,0 +1,23 @@
+@use "variables" as vars;
+
+.d_block {
+  display: block;
+}
+
+.d_inline_block {
+  display: inline-block;
+}
+
+.c_pointer {
+  cursor: pointer;
+}
+
+@each $a in vars.$aligns {
+  .align_#{$a} {
+    text-align: $a;
+  }
+}
+
+.block_center {
+  margin: 0 auto;
+}

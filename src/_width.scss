@@ -1,0 +1,15 @@
+@use "variables" as vars;
+
+.w_1per {
+  width: 1%;
+}
+
+$i: 0;
+
+@while $i<=100 {
+  .w_#{$i}per {
+    width: #{$i}+'%';
+  }
+
+  $i: $i + 5;
+}

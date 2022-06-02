@@ -1,0 +1,40 @@
+@use "variables" as vars;
+
+$i: 2;
+
+@while $i<=32 {
+  .p_#{$i} {
+    padding-top: #{$i}px;
+    padding-right: #{$i}px;
+    padding-bottom: #{$i}px;
+    padding-left: #{$i}px;
+  }
+
+  .px_#{$i} {
+    padding-right: #{$i}px;
+    padding-left: #{$i}px;
+  }
+
+  .py_#{$i} {
+    padding-top: #{$i}px;
+    padding-bottom: #{$i}px;
+  }
+
+  .pt_#{$i} {
+    padding-top: #{$i}px;
+  }
+
+  .pr_#{$i} {
+    padding-right: #{$i}px;
+  }
+
+  .pb_#{$i} {
+    padding-bottom: #{$i}px;
+  }
+
+  .pl_#{$i} {
+    padding-left: #{$i}px;
+  }
+
+  $i: $i + 2;
+}

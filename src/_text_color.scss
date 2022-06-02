@@ -1,0 +1,20 @@
+@use "variables" as vars;
+
+.text_black {
+  color: vars.$md_black;
+}
+
+.text_white {
+  color: vars.$md_white;
+}
+
+@each $name,
+$nums in vars.$md_color_map {
+
+  @each $num,
+  $color in $nums {
+    .text_#{$name}_#{$num} {
+      color: $color;
+    }
+  }
+}
