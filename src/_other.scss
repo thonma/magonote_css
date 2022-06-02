@@ -8,6 +8,14 @@
   display: inline-block;
 }
 
+.d_none {
+  display: none;
+}
+
+.d_invisible {
+  visibility: hidden;
+}
+
 .c_pointer {
   cursor: pointer;
 }
