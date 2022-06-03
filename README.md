@@ -2,8 +2,8 @@
   - [概要](#概要)
   - [インストール](#インストール)
   - [使い方](#使い方)
-    - [color, background-color, border](#color-background-color-border)
-    - [padding, margin](#padding-margin)
+    - [color / background-color / border](#color--background-color--border)
+    - [padding / margin](#padding--margin)
     - [width](#width)
     - [other](#other)
   - [カスタマイズ](#カスタマイズ)
@@ -13,7 +13,6 @@
 ## 概要
 - 「ここちょっと微調整したいな～」というときに使いたいスタイルがたくさん用意されているCSS
 - `margin-right: 2px;`, `padding: 6px;` などが大量に定義されているCSS
-- 俺的テンプレCSS
 - 劣化Tailwind CSS
 
 ## インストール
@@ -23,7 +22,7 @@
 
 ## 使い方
 
-### color, background-color, border
+### color / background-color / border
 - 参考
   - https://materialui.co/colors/
 
@@ -35,10 +34,10 @@
 <p class="bg_green_300"></p>
 
 <!-- border: 1px solid Blue900; -->
-<p class="bg_blue_900"></p>
+<p class="border_blue_900"></p>
 ```
 
-### padding, margin
+### padding / margin
 - 上下左右: `p_N`, `m_N`
 - 左右: `px_N`, `mx_N`
 - 上下: `py_N`, `my_N`
@@ -46,7 +45,7 @@
 - 下のみ: `pb_N`, `mb_N`
 - 左のみ: `pl_N`, `ml_N`
 - 右のみ: `pr_N`, `mr_N`
-  - N = 2, 4, 6, 8 ... 32
+  - N = 0, 2, 4, 6, 8 ... 32
 
 ```html
 <!-- padding: 2px 2px 2px 2px; -->
@@ -83,6 +82,8 @@
 ```
 
 ### other
+- 詳しくは `src/_other.scss` を見てください。
+
 ```html
 <!-- display -->
 <span class="d_block"></span>
