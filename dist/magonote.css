@@ -2902,6 +2902,39 @@
   border: 1px solid #263238;
 }
 
+.p_0 {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.px_0 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.py_0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.pt_0 {
+  padding-top: 0px;
+}
+
+.pr_0 {
+  padding-right: 0px;
+}
+
+.pb_0 {
+  padding-bottom: 0px;
+}
+
+.pl_0 {
+  padding-left: 0px;
+}
+
 .p_2 {
   padding-top: 2px;
   padding-right: 2px;
@@ -3428,6 +3461,39 @@
 
 .pl_32 {
   padding-left: 32px;
+}
+
+.m_0 {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.mx_0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.my_0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.mt_0 {
+  margin-top: 0px;
+}
+
+.mr_0 {
+  margin-right: 0px;
+}
+
+.mb_0 {
+  margin-bottom: 0px;
+}
+
+.ml_0 {
+  margin-left: 0px;
 }
 
 .m_2 {
